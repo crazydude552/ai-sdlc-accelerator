@@ -1,0 +1,36 @@
+1. Product Vision
+Product planned to develop is a web tool where user can create a project documentation from the UI and where the project details can be viewed on the screen, and BAs can add requirements of the projects from the ui on selecting the project, and can create respective documents from the details entered such as bsr, fsr etc as per the templates provided. Users can edit the details or requierements, can see the status of the project progress. can create features , pbi and tasks on highlevel, and create test cases and test suites.	
+		
+
+2. Business Objectives
+
+This tool will reduce the manual effort and will help to create sdlc documents with a click and can easily integrate with other platforms and tools.
+
+3. User Roles
+Admin - must have access to add plugins and all the permissions
+BA - access to view all the pages and edit and create new.
+Normal- Have read access to all the pages.
+
+
+4. Modules
+
+
+5. Screens
+Login Page:
+Home Screen Project:
+New button->New Screen Project:(Project name, description, division, status select (New, Inprogress, done, hold) empty
+Edit button-> Home screen with selection enable -> navigate to new screen where the data must be shown which are already available.
+	->under Edit project -> New screen will have option for Requirements button -> requirement New screen : with all the text boxes similar to project and must have all the columns for requirements (id, requirement description, priority, etc).
+			     -> Edit screen with selection of requiremet similar to edit project screen.
+Extract report button -> project new screen-> you must have options to extract reports similear to add requirements then the reprots must prepare based on the fields availble in template and must pick from the fields of project and requirements etc.
+
+
+6. User Workflows
+
+7. Import Workflows
+
+8. MVP Scope
+
+9. Future Scope
+
+10. Open Questions
