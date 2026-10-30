@@ -1,0 +1,137 @@
++------------------+
+|      USER        |
++------------------+
+| User_ID (PK)     |
+| Username         |
+| Email            |
+| Role             |
+| Status           |
++------------------+
+
+
++------------------+
+|     PROJECT      |
++------------------+
+| Project_ID (PK)  |
+| Project_Name     |
+| Description      |
+| Division         |
+| Status           |
+| Version          |
+| Created_By       |
+| Created_Date     |
++------------------+
+          |
+          |
+          | 1
+          |
+          | N
++----------------------+
+|    PROJECT_TEAM      |
++----------------------+
+| Team_ID (PK)         |
+| Project_ID (FK)      |
+| Name                 |
+| Role                 |
+| Responsibility       |
++----------------------+
+
+
+          |
+          |
+          | 1
+          |
+          | N
++----------------------+
+|    REQUIREMENT       |
++----------------------+
+| Requirement_ID (PK)  |
+| Project_ID (FK)      |
+| Requirement_Code     |
+| Title                |
+| Description          |
+| Requirement_Type     |
+| Priority             |
+| Status               |
+| Version              |
+| Source               |
+| Created_Date         |
++----------------------+
+          |
+          |
+          +------------------+
+          |                  |
+          |1                 |1
+          |                  |
+          |N                 |N
+          ▼                  ▼
+
++----------------------+   +----------------------+
+| REQUIREMENT_VERSION  |   |      AI_OUTPUT       |
++----------------------+   +----------------------+
+| Version_ID (PK)      |   | Output_ID (PK)       |
+| Requirement_ID (FK)  |   | Requirement_ID (FK)  |
+| Version_No           |   | Output_Type          |
+| Description          |   | Content              |
+| Modified_By          |   | Generated_Date       |
+| Modified_Date        |   +----------------------+
++----------------------+
+
+
++----------------------+
+|    IMPORT_BATCH      |
++----------------------+
+| Batch_ID (PK)        |
+| Project_ID (FK)      |
+| File_Name            |
+| File_Type            |
+| Status               |
+| Imported_By          |
+| Imported_Date        |
++----------------------+
+          |
+          |
+          |1
+          |
+          |N
+          ▼
+
++----------------------+
+|     IMPORT_ITEM      |
++----------------------+
+| Item_ID (PK)         |
+| Batch_ID (FK)        |
+| Row_Number           |
+| Requirement_ID (FK)  |
+| Import_Status        |
++----------------------+
+
+
+
++----------------------+
+| DOCUMENT_TEMPLATE    |
++----------------------+
+| Template_ID (PK)     |
+| Template_Name        |
+| Template_Type        |
+| File_Path            |
+| Version              |
++----------------------+
+          |
+          |
+          |1
+          |
+          |N
+          ▼
+
++----------------------+
+| GENERATED_DOCUMENT   |
++----------------------+
+| Document_ID (PK)     |
+| Project_ID (FK)      |
+| Template_ID (FK)     |
+| Document_Type        |
+| File_Name            |
+| Generated_By         |
+| Generated_Date       |
++----------------------+
